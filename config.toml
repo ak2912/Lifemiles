@@ -1,0 +1,40 @@
+# Configuration for LifeMiles scraper
+
+
+[files]
+airports = "data/airports.csv"
+airmiles = "data/airmiles_raw.csv"	# raw results are unsorted and include error messages; use --export
+
+
+[search]
+reverse_routes = false		# if false, assume the reverse route yields identical airmiles
+order = 'prioritised'		# random, prioritised, unsorted (default)
+# sorting disabled because routes in current data set were generated in file's order
+sort_airports = false		# if true, routes (origin-dest codes) are generated in alphabetical order
+
+max_accounts = 22			# if greater than the number of accounts, anonymous accounts will be used
+							# Note: the search function seems to work unrestricted without logging in
+							# 	    though it is prevented in the browser
+date_offset = 4				# search date obtained by adding date_offset to the current date
+want_weekday = true			# adjust search date if it does not fall on a weekday
+
+
+[[accounts]]
+username = "MicheleSAdler@dayrep.com"
+password = "7YDD6x44"
+
+[[accounts]]
+username = "EHarbison@jourrapide.com"
+password = "kaeLu1ohc8"
+
+[[accounts]]
+username = "JPittman@teleworm.us"
+password = "oon6pae9Jah"
+
+[[accounts]]
+username = "BJElkins@dayrep.com"
+password = "ieveeS4ae"
+
+[[accounts]]
+username = "BGScroggs@teleworm.us"
+password = "Thu9iGahyie"
